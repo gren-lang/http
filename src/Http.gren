@@ -147,7 +147,7 @@ post r =
     import File
     import Http
 
-    type Msg = Uploaded (Result Http.Error {})
+    type Msg = Uploaded (Result Http.Error Unit)
 
     upload : File.File -> Cmd Msg
     upload file =
@@ -514,7 +514,7 @@ For example, you might want this when uploading files:
     import Http
 
     type Msg
-      = Uploaded (Result Http.Error {})
+      = Uploaded (Result Http.Error Unit)
 
     upload : File -> Cmd Msg
     upload file =
@@ -526,9 +526,9 @@ For example, you might want this when uploading files:
 
 The server may be giving back a response body, but we do not care about it.
 -}
-expectWhatever : (Result Error {} -> msg) -> Expect msg
+expectWhatever : (Result Error Unit -> msg) -> Expect msg
 expectWhatever toMsg =
-  expectBytesResponse toMsg (resolve (\_ -> Ok {}))
+  expectBytesResponse toMsg (resolve (\_ -> Ok Unit))
 
 
 resolve : (body -> Result String a) -> Response body -> Result Error a
@@ -854,7 +854,7 @@ task
     }
   -> Task x a
 task r =
-  Gren.Kernel.Http.toTask {} resultToTask
+  Gren.Kernel.Http.toTask Unit resultToTask
     { method = r.method
     , headers = r.headers
     , url = r.url
@@ -901,7 +901,7 @@ riskyTask
     }
   -> Task x a
 riskyTask r =
-  Gren.Kernel.Http.toTask {} resultToTask
+  Gren.Kernel.Http.toTask Unit resultToTask
     { method = r.method
     , headers = r.headers
     , url = r.url
