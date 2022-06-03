@@ -170,8 +170,8 @@ function _Http_track(router, xhr, tracker)
 	xhr.upload.addEventListener('progress', function(event) {
 		if (xhr.__isAborted) { return; }
 		__Scheduler_rawSpawn(A2(__Platform_sendToSelf, router, {
-			tracker: tracker, 
-			progress: __Http_Sending({
+			__$tracker: tracker,
+			__$progress: __Http_Sending({
 				__$sent: event.loaded,
 				__$size: event.total
 			})
@@ -180,8 +180,8 @@ function _Http_track(router, xhr, tracker)
 	xhr.addEventListener('progress', function(event) {
 		if (xhr.__isAborted) { return; }
 		__Scheduler_rawSpawn(A2(__Platform_sendToSelf, router, {
-			tracker: tracker, 
-			progress: __Http_Receiving({
+			__$tracker: tracker,
+			__$progress: __Http_Receiving({
 				__$received: event.loaded,
 				__$size: event.lengthComputable ? __Maybe_Just(event.total) : __Maybe_Nothing
 			})
