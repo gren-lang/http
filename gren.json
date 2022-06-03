@@ -10,7 +10,7 @@
     "gren-version": "0.1.0 <= v < 0.2.0",
     "dependencies": {
         "gren-lang/bytes": "1.0.0 <= v < 2.0.0",
-        "gren-lang/core": "1.0.0 <= v < 2.0.0",
+        "gren-lang/core": "1.0.1 <= v < 2.0.0",
         "gren-lang/file": "1.0.1 <= v < 2.0.0",
         "gren-lang/json": "1.0.0 <= v < 2.0.0"
     },
