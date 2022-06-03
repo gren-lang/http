@@ -2,9 +2,6 @@
 
 Make HTTP requests in Gren. Talk to servers.
 
-**I very highly recommend reading through [The Official Guide](https://guide.gren-lang.org) to understand how to use this package!**
-
-
 ## Examples
 
 Here are some commands you might create to send HTTP requests with this package:
@@ -33,4 +30,3 @@ fetchItems =
     }
 ```
 
-But again, to really understand what is going on here, **read through [The Official Guide](https://guide.gren-lang.org).** It has sections describing how HTTP works and how to use it with JSON data. Reading through will take less time overall than trying to figure everything out by trial and error!
