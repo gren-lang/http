@@ -1,18 +1,18 @@
 {
     "type": "package",
-    "name": "elm/http",
+    "name": "gren-lang/http",
     "summary": "Make HTTP requests",
     "license": "BSD-3-Clause",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "exposed-modules": [
         "Http"
     ],
-    "elm-version": "0.19.0 <= v < 0.20.0",
+    "gren-version": "0.1.0 <= v < 0.2.0",
     "dependencies": {
-        "elm/bytes": "1.0.0 <= v < 2.0.0",
-        "elm/core": "1.0.1 <= v < 2.0.0",
-        "elm/file": "1.0.0 <= v < 2.0.0",
-        "elm/json": "1.1.0 <= v < 2.0.0"
+        "gren-lang/bytes": "1.0.0 <= v < 2.0.0",
+        "gren-lang/core": "1.0.0 <= v < 2.0.0",
+        "gren-lang/file": "1.0.1 <= v < 2.0.0",
+        "gren-lang/json": "1.0.0 <= v < 2.0.0"
     },
     "test-dependencies": {}
 }
