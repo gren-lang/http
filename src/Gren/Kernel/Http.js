@@ -45,10 +45,10 @@ var _Http_toTask = F3(function(router, toTask, request)
 // CONFIGURE
 
 function _Http_configureRequest(xhr, request)
-{
-	for (var headers = request.__$headers; headers.b; headers = headers.b) // WHILE_CONS
-	{
-		xhr.setRequestHeader(headers.a.a, headers.a.b);
+{ 	
+	var headers = request.__$headers;
+	for (var i=0; i < headers.length; i++) {
+		xhr.setRequestHeader(headers[i].a, headers[i].b);
 	}
 	xhr.timeout = request.__$timeout.a || 0;
 	xhr.responseType = request.__$expect.__type;
@@ -148,10 +148,9 @@ var _Http_pair = F2(function(a, b) { return { $: 0, a: a, b: b }; });
 
 function _Http_toFormData(parts)
 {
-	for (var formData = new FormData(); parts.b; parts = parts.b) // WHILE_CONS
-	{
-		var part = parts.a;
-		formData.append(part.a, part.b);
+	var formData = new FormData();
+	for (var i=0; i < parts.length; i++) {
+		formData.append(parts[i].a, parts[i].b);
 	}
 	return formData;
 }
