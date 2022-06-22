@@ -3,16 +3,16 @@
     "name": "gren-lang/http",
     "summary": "Make HTTP requests",
     "license": "BSD-3-Clause",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "exposed-modules": [
         "Http"
     ],
     "gren-version": "0.1.0 <= v < 0.2.0",
     "dependencies": {
-        "gren-lang/bytes": "1.0.0 <= v < 2.0.0",
-        "gren-lang/core": "1.0.1 <= v < 2.0.0",
-        "gren-lang/file": "1.0.1 <= v < 2.0.0",
-        "gren-lang/json": "1.0.0 <= v < 2.0.0"
+        "gren-lang/bytes": "1.0.1 <= v < 2.0.0",
+        "gren-lang/core": "2.0.1 <= v < 3.0.0",
+        "gren-lang/file": "1.0.2 <= v < 2.0.0",
+        "gren-lang/json": "1.0.1 <= v < 2.0.0"
     },
     "test-dependencies": {}
 }
